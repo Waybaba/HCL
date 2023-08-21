@@ -5,4 +5,4 @@ NUM_WORKERS: 4
 TEST:
   MODE: single
   RESTORE_FROM:
-    - ../../pretrained_models/GTA5_HCL_source.pth
+    - ./pretrained_models/GTA5_HCL_source.pth

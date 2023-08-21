@@ -83,6 +83,17 @@ RUN mim uninstall mmcv # uninstall mmcv so that the old mmcv-full would be used
 RUN mim install mmsegmentation==0.29
 # RUN mim install mmcv --no-binary :all:
 
+# for HCL
+# WORKDIR /app
+# RUN git clone https://github.com/waybaba/HCL.git
+# WORKDIR /app/HCL
+# RUN git clone https://github.com/valeoai/ADVENT.git
+# RUN pip install -e ./ADVENT
+# RUN pip install -e .
+
+
+RUN pip install pyyaml==4.2b4
+
 # Non-root user creation and enter
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
@@ -98,6 +109,8 @@ RUN groupadd --gid $USER_GID $USERNAME \
 USER $USERNAME
 ENV HOME /home/$USERNAME
 WORKDIR $HOME
+
+
 
 CMD	\
     sleep infinity

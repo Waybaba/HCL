@@ -127,7 +127,7 @@ To evaluate GTA5_HCL_target.pth:
 ```bash
 conda activate hcl_target
 cd HCL/hcl_target
-python evaluate_cityscapes_advent_best.py --restore-from ../../pretrained_models/GTA5_HCL_target.pth
+python evaluate_cityscapes_advent_best.py --restore-from ./pretrained_models/GTA5_HCL_target.pth
 ```
 
  ## Related Works

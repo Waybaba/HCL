@@ -10,6 +10,9 @@ import yaml
 import torch
 from torch.utils import data
 
+import pyrootutils
+root = pyrootutils.setup_root(__file__, dotenv=True, pythonpath=True, indicator=[".devcontainer"])
+
 from advent.model.deeplabv2 import get_deeplab_v2
 from advent.dataset.gta5 import GTA5DataSet
 from advent.dataset.cityscapes import CityscapesDataSet

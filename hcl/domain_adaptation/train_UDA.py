@@ -20,12 +20,8 @@ from PIL import Image
 # import cv2
 import numpy as np
 
-from advent.model.discriminator import get_fc_discriminator
-from advent.model.vallina_classifier import get_vallina_classifier
-from advent.utils.func import adjust_learning_rate, adjust_learning_rate_discriminator, adjust_learning_rate_pu_cls
-from advent.utils.func import loss_calc, bce_loss
-from advent.utils.loss import entropy_loss
-from advent.utils.func import prob_2_entropy
+from advent.utils.func import adjust_learning_rate
+from advent.utils.func import loss_calc
 from advent.utils.viz_segmask import colorize_mask
 
 # data loader
